@@ -1,0 +1,63 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.h1{
+	background-color: #808080;
+	padding: 20px;
+	color: white;
+	text-align: center;
+}
+.b{
+	border-bottom: 2px solid grey
+}
+.t{
+	border-left: 2px solid grey;
+	height: 500px;
+	position: absolute;
+	left:48%;
+	margin-left: 3px;
+	top:380px;
+}
+.grid {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"profile profile"
+	"skills experience"
+	"education experience";
+}
+.profile {
+	grid-area: profile;
+}
+.skills {
+	grid-area: skills;
+}
+.experience {
+	grid-area: experience;
+}
+.education {
+	grid-area: education;
+}
+.cv{
+	width: 90%;
+	max-width: 800px;
+	background: #f3f3f3;
+	background-color: white;
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-image: none;
+	background-size: auto;
+	background-origin: padding-box;
+	background-clip: border-box;
+	margin: 30px auto;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-bottom: 30px;
+	margin-left: auto;
+}
+img{
+	border-radius: 100%
+}

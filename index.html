@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+</body>
+<script type="text/babel">
+    const name = "VARGHESE";
+    const contact = "No.7,Kamaraj Nagar, Avadi, Chennai-600071 | 9884622748 | varghese87es@gmail.com";
+    const proHead = "Profile:";
+    const proData = "Innovative optimized solution seeker. Exited to be at the development phase of my new carreer as a web developer. I am ambitious, adventurous, animated and an Illustration advocate";
+    const skilHead = "Skills:";
+    const skilSubHead_1 = "Technical Skils";
+    const tech_1 = "JavaScript";
+    const tech_2 = "CSS";
+    const tech_3 = "React";
+    const tech_4 = "HTML";
+    const tech_5 = "Angular";
+    const tech_6 = "Mongo DB";
+    const skilSubHead_2 = "Additional Skils";
+    const addSk_1 = "Project Management";
+    const addSk_2 = "Recruitment";
+    const addSk_3 = "Business Development";
+    const addSk_4 = "Editing";
+    const addSk_5 = "Fund raising";
+    const addSk_6 = "Team Management";
+    const expHead = "Work Experience:";
+    const expSubhead_1 = "Manager Administration";
+    const expDuration_1 = "From Sep 2016 to till date";
+    const expData_1 = "Handling Facilities and administration for 41 branches and offices which is scattered across three states of south India.Key Areas Handled: General facility up keep, Procurement, Setting up of new branches, vendor identification and management, BCP, AMCs, Health & Safety";
+    const expSubhead_2 = "As Deputy Manager – Integrated Facilities Management";
+    const expDuration_2 = "From Sep 2016 to till date";
+    const expData_2 = "Handling Facilities and administration for 41 branches and offices which is scattered across three states of south India.Key Areas Handled: General facility up keep, Procurement, Setting up of new branches, vendor identification and management, BCP, AMCs, Health & Safety";
+    const expSubhead_3 = "As Senior Executive – Integrated Facilities Management";
+    const expDuration_3 = "From Sep 2016 to till date";
+    const expData_3 = "Handling Facilities and administration for 41 branches and offices which is scattered across three states of south India.Key Areas Handled: General facility up keep, Procurement, Setting up of new branches, vendor identification and management, BCP, AMCs, Health & Safety";
+    const eduHead = "Education:";
+    const univ = "SRM University";
+    const qualific = "Qualification : BCA";
+    const dep = "Department: Computer Application";
+    const pass = "Passed Out In 2010";
+
+    const expPatten = (value1, value2, value3) => (
+        <article>
+            <h4>{value1}</h4>
+            <p>{value2}</p>
+            <p>{value3}</p>
+        </article>
+    )
+
+    const expElement = (
+        <div>
+            <h3>{expHead}</h3>
+            {expPatten(expSubhead_1, expDuration_1, expData_1)}<br />
+            {expPatten(expSubhead_2, expDuration_2, expData_2)}<br />
+            {expPatten(expSubhead_3, expDuration_3, expData_3)}<br />
+        </div>
+    )
+
+    const skilPatten = (value1, value2, value3, value4, value5, value6, value7) => (
+        <div>
+            <center><h5>{value1}</h5></center>
+            <ul>
+                <li>{value2}</li>
+                <li>{value3}</li>
+                <li>{value4}</li>
+                <li>{value5}</li>
+                <li>{value6}</li>
+                <li>{value7}</li>
+            </ul><br />
+        </div>
+    );
+    const skilElement = (
+        <div>
+            <h3>{skilHead}</h3>
+            {skilPatten(skilSubHead_1, tech_1, tech_2, tech_3, tech_4, tech_5, tech_6)}
+            {skilPatten(skilSubHead_2, addSk_1, addSk_2, addSk_3, addSk_4, addSk_5, addSk_6)}
+        </div>
+    )
+    const element = (
+        <div className="container">
+            <div className="cv">
+                <h1 className="h1">
+                    <p>{name}</p>
+                </h1>
+                <p><center>{contact}</center></p>
+                <div className="b"></div>
+                <div className="grid">
+                    <div className="profile">
+                        <h3>{proHead}</h3>
+                        <p>{proData}</p><br />
+                    </div>
+                    <div id="skil" className="skills"></div>
+                    <div id="exp" className="experience"></div>
+                    <div className="education">
+                        <h3>{eduHead}</h3>
+                        <article>
+                            <h4>{univ}</h4>
+                            <p>{qualific}</p>
+                            <p>{dep}</p>
+                            <p>{pass}</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+    ReactDOM.render(element, document.body);
+    ReactDOM.render(skilElement, document.getElementById("skil"));
+    ReactDOM.render(expElement, document.getElementById("exp"))
+
+</script>
+
+</html>
